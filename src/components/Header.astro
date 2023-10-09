@@ -13,7 +13,8 @@ console.log("here write javascript");
       All the information about SpaceX launches
     </p>
   </div>
-  <Counter transition:persist client:visible /> //transition:persist hace que se quede guardado la informacion si es que cambia de pagina. y el client visible hace que el componente sea interactivo y no estatico, ya que astro no sabe que es dinamico, porque todo lo toma como estatico
+  <!-- <Counter transition:persist client:visible /> // transition:persist hace que se quede guardado la informacion si es que cambia de pagina. y el client visible hace que el componente sea interactivo y no estatico, ya que astro no sabe que es dinamico, porque todo lo toma como estatico -->
+  <Counter transition:persist client:visible /> 
   <nav
     class="flex flex-col items-center justify-between w-full text-center md:flex-row"
   >
