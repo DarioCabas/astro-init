@@ -1,19 +1,9 @@
 ---
-import { type APISpaceX } from "../types/api";
-import CardLaunch from "./CardLaunch.astro";
-const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    options: {
-      limit: 12,
-    },
-  }),
-});
-const { docs: launches } = (await res.json()) as APISpaceX;
 
+import CardLaunch from "./CardLaunch.astro";
+import { getLatestLaunches } from '../services/spacex.ts' 
+
+const launches = await getLatestLaunches()
 
 ---
 
